@@ -3,7 +3,7 @@ echo "This script will provision the host and two nodes"
 
 echo "===============Provisioning rancher=============="
 echo "==Piping logs to rancher/rancher_provisionig.log="
-cd host
+cd rancher
 vagrant up > rancher_provisionig.log
 cd ..
 echo "=========Provisioning rancher - FINISHED========="
@@ -17,7 +17,7 @@ echo "==========Provisioning host - FINISHED=========="
 
 echo "================Provisioning etcd==============="
 echo "====Piping logs to etcd/etcd_provisionig.log===="
-cd host
+cd etcd
 vagrant up > etcd_provisionig.log
 cd ..
 echo "==========Provisioning etcd - FINISHED=========="
