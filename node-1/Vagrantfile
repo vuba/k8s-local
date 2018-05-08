@@ -3,7 +3,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.hostname = "ubuntu-rancher-host"
-  config.vm.network "private_network", ip: "192.168.50.5"
+  config.vm.network "private_network", ip: "192.168.50.7"
 
   config.vm.provision "shell", path: "install_scripts/prepareHost.sh"
   config.vm.provision "shell", path: "install_scripts/installDocker.sh"
