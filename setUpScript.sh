@@ -1,0 +1,16 @@
+#!/bin/sh
+echo "This script will provision the host and two nodes"
+echo "=========Provisioning host========="
+cd host
+vagrant up > host_provisionig.log
+cd ..
+echo "===Provisioning host - FINISHED ==="
+echo "========Provisioning node-1========"
+cd node-1
+vagrant up > node-1_provisionig.log
+cd ..
+echo "==Provisioning node-1 - FINISHED =="
+echo "========Provisioning node-1========"
+cd node-2
+vagrant up > node-2_provisionig.log
+echo "==Provisioning node-2 - FINISHED =="
