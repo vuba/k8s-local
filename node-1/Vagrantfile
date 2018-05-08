@@ -8,7 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", path: "install_scripts/prepareHost.sh"
   config.vm.provision "shell", path: "install_scripts/installDocker.sh"
   config.vm.provider "virtualbox" do |vm|
-    vm.name = "ubuntu-rancher-host"
+    vm.name = "ubuntu-rancher-node-1"
     vm.gui = false
     vm.memory = 2048
     vm.cpus = 2
