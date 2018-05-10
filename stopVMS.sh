@@ -6,9 +6,6 @@ cd ..
 cd node-1
 vagrant halt
 cd ..
-cd etcd
-vagrant halt
-cd ..
 cd host
 vagrant halt
 cd ..

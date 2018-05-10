@@ -15,13 +15,6 @@ vagrant up > host_provisionig.log
 cd ..
 echo "==========Provisioning host - FINISHED=========="
 
-echo "================Provisioning etcd==============="
-echo "====Piping logs to etcd/etcd_provisionig.log===="
-cd etcd
-vagrant up > etcd_provisionig.log
-cd ..
-echo "==========Provisioning etcd - FINISHED=========="
-
 echo "=============Provisioning node-1================"
 echo "==Piping logs to node-1/node-1_provisionig.log=="
 cd node-1
