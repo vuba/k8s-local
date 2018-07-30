@@ -1,0 +1,34 @@
+# ------- rancher -----
+Host k8s-rancher
+  HostName 192.168.56.101
+  IdentityFile /home/vuba/.ssh/my_rsa
+  User k8s
+# -----host----
+Host k8s-host
+  HostName 192.168.56.102
+  IdentityFile /home/vuba/.ssh/my_rsa
+  User k8s
+
+# -----node----
+Host k8s-node
+  HostName 192.168.56.103
+  IdentityFile /home/vuba/.ssh/my_rsa
+  User k8s
+
+# -----registry----
+Host k8s-registry
+  HostName 192.168.56.7
+  IdentityFile /home/vuba/.ssh/my_rsa
+  User k8s
+
+# -----minio----
+Host k8s-minio
+  HostName 192.168.56.8
+  IdentityFile /home/vuba/.ssh/my_rsa
+  User k8s
+
+# -----minio----
+Host k8s-nfs
+  HostName 192.168.56.9
+  IdentityFile /home/vuba/.ssh/my_rsa
+  User k8s

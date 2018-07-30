@@ -1,0 +1,22 @@
+#apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: jenkins
+  labels:
+    app: jenkins-vuk
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins-vuk
+  template:
+    metadata:
+      labels:
+        app: jenkins-vuk
+    spec:
+      containers:
+      - name: jenkins
+        image: jenkins/jenkins:lts
+        ports:
+        - containerPort: 8080

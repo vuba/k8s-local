@@ -1,0 +1,14 @@
+#apiVersion: apps/v1beta1
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  labels:
+    app: mysql-vuk
+spec:
+  ports:
+  - port: 3306
+    protocol: TCP
+  type: ClusterIP
+  selector:
+    app: mysql-vuk
