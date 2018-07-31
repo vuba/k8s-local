@@ -1,0 +1,659 @@
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'ubuntu/trusty64' is up to date...
+==> default: Setting the name of the VM: ubuntu-k8s-rancher
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: password
+    default: Warning: Connection reset. Retrying...
+    default: Warning: Remote connection disconnect. Retrying...
+    default: Warning: Connection reset. Retrying...
+    default: Warning: Authentication failure. Retrying...
+    default: 
+    default: Inserting generated public key within guest...
+    default: Removing insecure key from the guest if it's present...
+    default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default: 
+    default: Guest Additions Version: 4.3.36
+    default: VirtualBox Version: 5.2
+==> default: Setting hostname...
+==> default: Configuring and enabling network interfaces...
+==> default: Mounting shared folders...
+    default: /vagrant => /home/vuba/devTools/projects/k8s-local/vagrant/rancher
+==> default: Running provisioner: file...
+==> default: Running provisioner: shell...
+    default: Running: /tmp/vagrant-shell20180731-13471-imi5ur.sh
+    default: [SCRIPT] -> Installing essential tools
+    default: Ign http://archive.ubuntu.com trusty InRelease
+    default: Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+    default: Get:2 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+    default: Hit http://archive.ubuntu.com trusty-backports InRelease
+    default: Get:3 http://security.ubuntu.com trusty-security/main Sources [160 kB]
+    default: Hit http://archive.ubuntu.com trusty Release.gpg
+    default: Get:4 http://archive.ubuntu.com trusty-updates/main Sources [418 kB]
+    default: Get:5 http://security.ubuntu.com trusty-security/universe Sources [75.9 kB]
+    default: Get:6 http://security.ubuntu.com trusty-security/main amd64 Packages [752 kB]
+    default: Get:7 http://archive.ubuntu.com trusty-updates/restricted Sources [6,322 B]
+    default: Get:8 http://archive.ubuntu.com trusty-updates/universe Sources [203 kB]
+    default: Get:9 http://archive.ubuntu.com trusty-updates/multiverse Sources [7,433 B]
+    default: Get:10 http://security.ubuntu.com trusty-security/universe amd64 Packages [237 kB]
+    default: Get:11 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1,090 kB]
+    default: Get:12 http://security.ubuntu.com trusty-security/main Translation-en [407 kB]
+    default: Get:13 http://security.ubuntu.com trusty-security/universe Translation-en [129 kB]
+    default: Get:14 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.2 kB]
+    default: Get:15 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [464 kB]
+    default: Get:16 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.6 kB]
+    default: Get:17 http://archive.ubuntu.com trusty-updates/main Translation-en [540 kB]
+    default: Get:18 http://archive.ubuntu.com trusty-updates/multiverse Translation-en [7,616 B]
+    default: Get:19 http://archive.ubuntu.com trusty-updates/restricted Translation-en [4,021 B]
+    default: Get:20 http://archive.ubuntu.com trusty-updates/universe Translation-en [248 kB]
+    default: Get:21 http://archive.ubuntu.com trusty-backports/main Sources [9,709 B]
+    default: Get:22 http://archive.ubuntu.com trusty-backports/restricted Sources [28 B]
+    default: Get:23 http://archive.ubuntu.com trusty-backports/universe Sources [35.4 kB]
+    default: Get:24 http://archive.ubuntu.com trusty-backports/multiverse Sources [1,896 B]
+    default: Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+    default: Hit http://archive.ubuntu.com trusty Release
+    default: Get:25 http://archive.ubuntu.com trusty/main Sources [1,064 kB]
+    default: Get:26 http://archive.ubuntu.com trusty/restricted Sources [5,433 B]
+    default: Get:27 http://archive.ubuntu.com trusty/universe Sources [6,399 kB]
+    default: Get:28 http://archive.ubuntu.com trusty/multiverse Sources [174 kB]
+    default: Hit http://archive.ubuntu.com trusty/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+    default: Hit http://archive.ubuntu.com trusty/restricted Translation-en
+    default: Hit http://archive.ubuntu.com trusty/universe Translation-en
+    default: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+    default: Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+    default: Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+    default: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+    default: Fetched 12.6 MB in 6s (2,032 kB/s)
+    default: Reading package lists...
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: Reading state information...
+    default: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+    default: Hit http://security.ubuntu.com trusty-security InRelease
+    default: Ign http://archive.ubuntu.com trusty InRelease
+    default: Hit http://archive.ubuntu.com trusty-updates InRelease
+    default: Hit http://security.ubuntu.com trusty-security/main Sources
+    default: Hit http://archive.ubuntu.com trusty-backports InRelease
+    default: Hit http://security.ubuntu.com trusty-security/universe Sources
+    default: Hit http://archive.ubuntu.com trusty Release.gpg
+    default: Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/main Sources
+    default: Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+    default: Hit http://security.ubuntu.com trusty-security/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/universe Sources
+    default: Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+    default: Hit http://security.ubuntu.com trusty-security/universe Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/main Sources
+    default: Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+    default: Hit http://archive.ubuntu.com trusty-backports/universe Sources
+    default: Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+    default: Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+    default: Hit http://archive.ubuntu.com trusty Release
+    default: Hit http://archive.ubuntu.com trusty/main Sources
+    default: Hit http://archive.ubuntu.com trusty/restricted Sources
+    default: Hit http://archive.ubuntu.com trusty/universe Sources
+    default: Hit http://archive.ubuntu.com trusty/multiverse Sources
+    default: Hit http://archive.ubuntu.com trusty/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+    default: Hit http://archive.ubuntu.com trusty/restricted Translation-en
+    default: Hit http://archive.ubuntu.com trusty/universe Translation-en
+    default: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+    default: Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+    default: Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+    default: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+    default: Reading package lists...
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: 
+    default: Reading state information...
+    default: tmux is already the newest version.
+    default: curl is already the newest version.
+    default: vim is already the newest version.
+    default: The following extra packages will be installed:
+    default:   git-man liberror-perl libssh2-1 mc-data python-jinja2 python-markupsafe
+    default:   python-psutil
+    default: Suggested packages:
+    default:   git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+    default:   gitweb git-arch git-bzr git-cvs git-mediawiki git-svn arj catdvi
+    default:   texlive-binaries dbview djvulibre-bin genisoimage gv imagemagick odt2txt
+    default:   poppler-utils python-boto python-tz xpdf pdf-viewer zip python-jinja2-doc
+    default: The following NEW packages will be installed:
+    default:   git git-man glances htop liberror-perl libssh2-1 mc mc-data python-jinja2
+    default:   python-markupsafe python-psutil rar unrar unzip whois
+    default: 0 upgraded, 15 newly installed, 0 to remove and 0 not upgraded.
+    default: Need to get 6,824 kB of archives.
+    default: After this operation, 34.1 MB of additional disk space will be used.
+    default: Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/universe libssh2-1 amd64 1.4.3-2ubuntu0.1 [66.4 kB]
+    default: Get:2 http://archive.ubuntu.com/ubuntu/ trusty/main liberror-perl all 0.17-1.1 [21.1 kB]
+    default: Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main git-man all 1:1.9.1-1ubuntu0.8 [701 kB]
+    default: Get:4 http://archive.ubuntu.com/ubuntu/ trusty-updates/main git amd64 1:1.9.1-1ubuntu0.8 [2,672 kB]
+    default: Get:5 http://archive.ubuntu.com/ubuntu/ trusty/universe htop amd64 1.0.2-3 [68.0 kB]
+    default: Get:6 http://archive.ubuntu.com/ubuntu/ trusty/universe mc-data all 3:4.8.11-1 [1,134 kB]
+    default: Get:7 http://archive.ubuntu.com/ubuntu/ trusty/universe mc amd64 3:4.8.11-1 [453 kB]
+    default: Get:8 http://archive.ubuntu.com/ubuntu/ trusty/main python-markupsafe amd64 0.18-1build2 [14.3 kB]
+    default: Get:9 http://archive.ubuntu.com/ubuntu/ trusty/main python-jinja2 all 2.7.2-2 [161 kB]
+    default: Get:10 http://archive.ubuntu.com/ubuntu/ trusty/main python-psutil amd64 1.2.1-1ubuntu2 [50.2 kB]
+    default: Get:11 http://archive.ubuntu.com/ubuntu/ trusty/multiverse rar amd64 2:4.2.0-1 [671 kB]
+    default: Get:12 http://archive.ubuntu.com/ubuntu/ trusty-updates/multiverse unrar amd64 1:5.0.10-1ubuntu0.14.04.1 [117 kB]
+    default: Get:13 http://archive.ubuntu.com/ubuntu/ trusty-updates/main unzip amd64 6.0-9ubuntu1.5 [157 kB]
+    default: Get:14 http://archive.ubuntu.com/ubuntu/ trusty/main whois amd64 5.1.1 [30.2 kB]
+    default: Get:15 http://archive.ubuntu.com/ubuntu/ trusty/universe glances all 1.7.3-2ubuntu1 [509 kB]
+    default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    default: Fetched 6,824 kB in 2s (2,650 kB/s)
+    default: Selecting previously unselected package libssh2-1:amd64.
+    default: (Reading database ... 63130 files and directories currently installed.)
+    default: Preparing to unpack .../libssh2-1_1.4.3-2ubuntu0.1_amd64.deb ...
+    default: Unpacking libssh2-1:amd64 (1.4.3-2ubuntu0.1) ...
+    default: Selecting previously unselected package liberror-perl.
+    default: Preparing to unpack .../liberror-perl_0.17-1.1_all.deb ...
+    default: Unpacking liberror-perl (0.17-1.1) ...
+    default: Selecting previously unselected package git-man.
+    default: Preparing to unpack .../git-man_1%3a1.9.1-1ubuntu0.8_all.deb ...
+    default: Unpacking git-man (1:1.9.1-1ubuntu0.8) ...
+    default: Selecting previously unselected package git.
+    default: Preparing to unpack .../git_1%3a1.9.1-1ubuntu0.8_amd64.deb ...
+    default: Unpacking git (1:1.9.1-1ubuntu0.8) ...
+    default: Selecting previously unselected package htop.
+    default: Preparing to unpack .../htop_1.0.2-3_amd64.deb ...
+    default: Unpacking htop (1.0.2-3) ...
+    default: Selecting previously unselected package mc-data.
+    default: Preparing to unpack .../mc-data_3%3a4.8.11-1_all.deb ...
+    default: Unpacking mc-data (3:4.8.11-1) ...
+    default: Selecting previously unselected package mc.
+    default: Preparing to unpack .../mc_3%3a4.8.11-1_amd64.deb ...
+    default: Unpacking mc (3:4.8.11-1) ...
+    default: Selecting previously unselected package python-markupsafe.
+    default: Preparing to unpack .../python-markupsafe_0.18-1build2_amd64.deb ...
+    default: Unpacking python-markupsafe (0.18-1build2) ...
+    default: Selecting previously unselected package python-jinja2.
+    default: Preparing to unpack .../python-jinja2_2.7.2-2_all.deb ...
+    default: Unpacking python-jinja2 (2.7.2-2) ...
+    default: Selecting previously unselected package python-psutil.
+    default: Preparing to unpack .../python-psutil_1.2.1-1ubuntu2_amd64.deb ...
+    default: Unpacking python-psutil (1.2.1-1ubuntu2) ...
+    default: Selecting previously unselected package rar.
+    default: Preparing to unpack .../rar_2%3a4.2.0-1_amd64.deb ...
+    default: Unpacking rar (2:4.2.0-1) ...
+    default: Selecting previously unselected package unrar.
+    default: Preparing to unpack .../unrar_1%3a5.0.10-1ubuntu0.14.04.1_amd64.deb ...
+    default: Unpacking unrar (1:5.0.10-1ubuntu0.14.04.1) ...
+    default: Selecting previously unselected package unzip.
+    default: Preparing to unpack .../unzip_6.0-9ubuntu1.5_amd64.deb ...
+    default: Unpacking unzip (6.0-9ubuntu1.5) ...
+    default: Selecting previously unselected package whois.
+    default: Preparing to unpack .../archives/whois_5.1.1_amd64.deb ...
+    default: Unpacking whois (5.1.1) ...
+    default: Selecting previously unselected package glances.
+    default: Preparing to unpack .../glances_1.7.3-2ubuntu1_all.deb ...
+    default: Unpacking glances (1.7.3-2ubuntu1) ...
+    default: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+    default: Processing triggers for mime-support (3.54ubuntu1.1) ...
+    default: Processing triggers for hicolor-icon-theme (0.13-1) ...
+    default: Processing triggers for ureadahead (0.100.0-16) ...
+    default: Setting up libssh2-1:amd64 (1.4.3-2ubuntu0.1) ...
+    default: Setting up liberror-perl (0.17-1.1) ...
+    default: Setting up git-man (1:1.9.1-1ubuntu0.8) ...
+    default: Setting up git (1:1.9.1-1ubuntu0.8) ...
+    default: Setting up htop (1.0.2-3) ...
+    default: Setting up mc-data (3:4.8.11-1) ...
+    default: Setting up mc (3:4.8.11-1) ...
+    default: Setting up python-markupsafe (0.18-1build2) ...
+    default: Setting up python-jinja2 (2.7.2-2) ...
+    default: Setting up python-psutil (1.2.1-1ubuntu2) ...
+    default: Setting up rar (2:4.2.0-1) ...
+    default: Setting up unrar (1:5.0.10-1ubuntu0.14.04.1) ...
+    default: update-alternatives: 
+    default: using /usr/bin/unrar-nonfree to provide /usr/bin/unrar (unrar) in auto mode
+    default: Setting up unzip (6.0-9ubuntu1.5) ...
+    default: Setting up whois (5.1.1) ...
+    default: Setting up glances (1.7.3-2ubuntu1) ...
+    default: Creating system user 'glances'
+    default: .
+    default:  * Starting Glances server glances 
+    default:  * Not starting glances: disabled by /etc/default/glances.
+    default: Processing triggers for libc-bin (2.19-0ubuntu6.14) ...
+    default: Processing triggers for ureadahead (0.100.0-16) ...
+==> default: Running provisioner: shell...
+    default: Running: /tmp/vagrant-shell20180731-13471-14x6lgl.sh
+    default:  
+    default:  
+    default: %
+    default:  
+    default: T
+    default: o
+    default: t
+    default: a
+    default: l
+    default:  
+    default:  
+    default:  
+    default:  
+    default: %
+    default:  
+    default: R
+    default: e
+    default: c
+    default: e
+    default: i
+    default: v
+    default: e
+    default: d
+    default:  
+    default: %
+    default:  
+    default: X
+    default: f
+    default: e
+    default: r
+    default: d
+    default:  
+    default:  
+    default: A
+    default: v
+    default: e
+    default: rage Speed   Time    Time     Time  Current
+    default:                                  Dload  Upload   Total   Spent    Left  Speed
+    default:   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+    default: 1
+    default: 0
+    default: 0
+    default:  15249  1
+    default: 00 15249    0 
+    default:     0  86301      0 --:--:-- --:--:-- --:--:-- 86642
+    default: + 
+    default: sh
+    default:  -c
+    default:  apt-get update
+    default: Hit http://security.ubuntu.com trusty-security InRelease
+    default: Ign http://archive.ubuntu.com trusty InRelease
+    default: Hit http://archive.ubuntu.com trusty-updates InRelease
+    default: Hit http://security.ubuntu.com trusty-security/main Sources
+    default: Hit http://archive.ubuntu.com trusty-backports InRelease
+    default: Hit http://security.ubuntu.com trusty-security/universe Sources
+    default: Hit http://archive.ubuntu.com trusty Release.gpg
+    default: Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/main Sources
+    default: Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+    default: Hit http://security.ubuntu.com trusty-security/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/universe Sources
+    default: Hit http://security.ubuntu.com trusty-security/universe Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+    default: Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/main Sources
+    default: Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+    default: Hit http://archive.ubuntu.com trusty-backports/universe Sources
+    default: Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+    default: Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+    default: Hit http://archive.ubuntu.com trusty Release
+    default: Hit http://archive.ubuntu.com trusty/main Sources
+    default: Hit http://archive.ubuntu.com trusty/restricted Sources
+    default: Hit http://archive.ubuntu.com trusty/universe Sources
+    default: Hit http://archive.ubuntu.com trusty/multiverse Sources
+    default: Hit http://archive.ubuntu.com trusty/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+    default: Hit http://archive.ubuntu.com trusty/restricted Translation-en
+    default: Hit http://archive.ubuntu.com trusty/universe Translation-en
+    default: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+    default: Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+    default: Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+    default: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+    default: Reading package lists...
+    default: + 
+    default: sh
+    default:  -c
+    default:  apt-get install -y -q apt-transport-https ca-certificates curl software-properties-common
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: Reading state information...
+    default: apt-transport-https is already the newest version.
+    default: ca-certificates is already the newest version.
+    default: curl is already the newest version.
+    default: software-properties-common is already the newest version.
+    default: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+    default: + 
+    default: + 
+    default: sh
+    default: curl
+    default:  -c
+    default:  apt-key add -
+    default:  -fsSl
+    default:  https://download.docker.com/linux/ubuntu/gpg
+    default: OK
+    default: + sh -c add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu trusty stable"
+    default: + 
+    default: [
+    default:  ubuntu
+    default:  =
+    default:  debian
+    default:  ]
+    default: + 
+    default: sh
+    default:  -c
+    default:  apt-get update
+    default: Hit http://security.ubuntu.com trusty-security InRelease
+    default: Ign http://archive.ubuntu.com trusty InRelease
+    default: Hit http://security.ubuntu.com trusty-security/main Sources
+    default: Hit http://archive.ubuntu.com trusty-updates InRelease
+    default: Hit http://security.ubuntu.com trusty-security/universe Sources
+    default: Hit http://archive.ubuntu.com trusty-backports InRelease
+    default: Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty Release.gpg
+    default: Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/main Sources
+    default: Hit http://security.ubuntu.com trusty-security/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+    default: Get:1 https://download.docker.com trusty/stable amd64 Packages
+    default: Hit http://security.ubuntu.com trusty-security/universe Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/universe Sources
+    default: Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+    default: Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+    default: Get:2 https://download.docker.com trusty/stable Translation-en_US
+    default: Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+    default: Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/main Sources
+    default: Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+    default: Hit http://archive.ubuntu.com trusty-backports/universe Sources
+    default: Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+    default: Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+    default: Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+    default: Hit http://archive.ubuntu.com trusty Release
+    default: Hit http://archive.ubuntu.com trusty/main Sources
+    default: Hit http://archive.ubuntu.com trusty/restricted Sources
+    default: Ign https://download.docker.com trusty/stable Translation-en_US
+    default: Hit http://archive.ubuntu.com trusty/universe Sources
+    default: Hit http://archive.ubuntu.com trusty/multiverse Sources
+    default: Ign https://download.docker.com trusty/stable Translation-en
+    default: Hit http://archive.ubuntu.com trusty/main amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+    default: Hit http://archive.ubuntu.com trusty/main Translation-en
+    default: Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+    default: Hit http://archive.ubuntu.com trusty/restricted Translation-en
+    default: Hit http://archive.ubuntu.com trusty/universe Translation-en
+    default: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+    default: Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+    default: Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+    default: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+    default: Fetched 30.5 kB in 4s (7,445 B/s)
+    default: Reading package lists...
+    default: + 
+    default: apt-cache
+    default:  madison
+    default:  docker-ce
+    default: + 
+    default: + head -n 1
+    default: cut
+    default:  -d
+    default:   
+    default:  -f
+    default:  4
+    default: + 
+    default: grep 17.03.2
+    default: + 
+    default: sh
+    default:  -c
+    default:  apt-get install -y -q docker-ce=17.03.2~ce-0~ubuntu-trusty
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: Reading state information...
+    default: The following extra packages will be installed:
+    default:   aufs-tools cgroup-lite libsystemd-journal0
+    default: The following NEW packages will be installed:
+    default:   aufs-tools cgroup-lite docker-ce libsystemd-journal0
+    default: 0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+    default: Need to get 19.2 MB of archives.
+    default: After this operation, 89.1 MB of additional disk space will be used.
+    default: Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libsystemd-journal0 amd64 204-5ubuntu20.28 [50.8 kB]
+    default: Get:2 http://archive.ubuntu.com/ubuntu/ trusty/universe aufs-tools amd64 1:3.2+20130722-1.1 [92.3 kB]
+    default: Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main cgroup-lite all 1.9 [3,918 B]
+    default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    default: Fetched 19.2 MB in 3s (5,318 kB/s)
+    default: Selecting previously unselected package libsystemd-journal0:amd64.
+    default: (Reading database ... 64464 files and directories currently installed.)
+    default: Preparing to unpack .../libsystemd-journal0_204-5ubuntu20.28_amd64.deb ...
+    default: Unpacking libsystemd-journal0:amd64 (204-5ubuntu20.28) ...
+    default: Selecting previously unselected package aufs-tools.
+    default: Preparing to unpack .../aufs-tools_1%3a3.2+20130722-1.1_amd64.deb ...
+    default: Unpacking aufs-tools (1:3.2+20130722-1.1) ...
+    default: Selecting previously unselected package docker-ce.
+    default: Preparing to unpack .../docker-ce_17.03.2~ce-0~ubuntu-trusty_amd64.deb ...
+    default: Unpacking docker-ce (17.03.2~ce-0~ubuntu-trusty) ...
+    default: Selecting previously unselected package cgroup-lite.
+    default: Preparing to unpack .../cgroup-lite_1.9_all.deb ...
+    default: Unpacking cgroup-lite (1.9) ...
+    default: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+    default: Processing triggers for ureadahead (0.100.0-16) ...
+    default: Setting up libsystemd-journal0:amd64 (204-5ubuntu20.28) ...
+    default: Setting up aufs-tools (1:3.2+20130722-1.1) ...
+    default: Setting up docker-ce (17.03.2~ce-0~ubuntu-trusty) ...
+    default: docker start/running, process 6071
+    default: Setting up cgroup-lite (1.9) ...
+    default: cgroup-lite start/running
+    default: Processing triggers for libc-bin (2.19-0ubuntu6.14) ...
+    default: Processing triggers for ureadahead (0.100.0-16) ...
+    default: + sh -c docker version
+    default: Client:
+    default:  Version:      17.03.2-ce
+    default:  API version:  1.27
+    default: 
+    default:  Go version:   go1.7.5
+    default:  Git commit:   f5ec1e2
+    default:  Built:        Tue Jun 27 03:11:13 2017
+    default:  OS/Arch:      linux/amd64
+    default: 
+    default: 
+    default: Server:
+    default:  Version:      17.03.2-ce
+    default:  API version:  1.27 (minimum version 1.12)
+    default:  Go version:   go1.7.5
+    default:  Git commit:   f5ec1e2
+    default:  Built:        Tue Jun 27 03:11:13 2017
+    default:  OS/Arch:      linux/amd64
+    default:  Experimental: false
+    default: 
+    default: If you would like to use Docker as a non-root user, you should now consider
+    default: adding your user to the "docker" group with something like:
+    default: 
+    default:   sudo usermod -aG docker your-user
+    default: 
+    default: Remember that you will have to log out and back in for this to take effect!
+    default: 
+    default: WARNING: Adding a user to the "docker" group will grant the ability to run
+    default:          containers which can be used to obtain root privileges on the
+    default:          docker host.
+    default:          Refer to https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
+    default:          for more information.
+==> default: Running provisioner: shell...
+==> default: Forcing shutdown of VM...
+==> default: Destroying VM and associated drives...
+/opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/provisioners/shell/provisioner.rb:257:in `read': No such file or directory @ rb_sysopen - /home/vuba/devTools/projects/k8s-local/vagrant/rancher/install_scripts/authorise_key.sh (Errno::ENOENT)
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/provisioners/shell/provisioner.rb:257:in `read'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/provisioners/shell/provisioner.rb:257:in `with_script_file'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/provisioners/shell/provisioner.rb:61:in `provision_ssh'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/provisioners/shell/provisioner.rb:27:in `provision'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/provision.rb:138:in `run_provisioner'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:95:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:95:in `block in finalize_action'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builder.rb:116:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `block in run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/busy.rb:19:in `busy'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/environment.rb:510:in `hook'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/provision.rb:126:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/provision.rb:126:in `block in call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/provision.rb:103:in `each'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/provision.rb:103:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/clear_forwarded_ports.rb:15:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/set_name.rb:50:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/clean_machine_folder.rb:17:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/check_accessible.rb:18:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:95:in `block in finalize_action'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builder.rb:116:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `block in run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/busy.rb:19:in `busy'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/call.rb:53:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:95:in `block in finalize_action'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builder.rb:116:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `block in run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/busy.rb:19:in `busy'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/call.rb:53:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:95:in `block in finalize_action'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builder.rb:116:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `block in run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/busy.rb:19:in `busy'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/call.rb:53:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/box_check_outdated.rb:82:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/config_validate.rb:25:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/check_virtualbox.rb:26:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:95:in `block in finalize_action'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/match_mac_address.rb:19:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/discard_state.rb:15:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/import.rb:74:in `import'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/import.rb:13:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/prepare_clone_snapshot.rb:17:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/prepare_clone.rb:15:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/customize.rb:40:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/check_accessible.rb:18:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:95:in `block in finalize_action'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builder.rb:116:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `block in run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/busy.rb:19:in `busy'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/call.rb:53:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/config_validate.rb:25:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:95:in `block in finalize_action'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/handle_box.rb:56:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:95:in `block in finalize_action'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builder.rb:116:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `block in run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/busy.rb:19:in `busy'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builtin/call.rb:53:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/plugins/providers/virtualbox/action/check_virtualbox.rb:26:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/warden.rb:34:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/builder.rb:116:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `block in run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/busy.rb:19:in `busy'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/action/runner.rb:66:in `run'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/machine.rb:239:in `action_raw'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/machine.rb:208:in `block in action'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/environment.rb:598:in `lock'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/machine.rb:194:in `call'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/machine.rb:194:in `action'
+	from /opt/vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/batch_action.rb:82:in `block (2 levels) in run'

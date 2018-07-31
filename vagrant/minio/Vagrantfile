@@ -1,0 +1,18 @@
+
+VAGRANTFILE_API_VERSION = "2"
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.hostname = "ubuntu-k8s-minio"
+  config.vm.network "private_network", ip: "192.168.50.104"
+  config.vm.provision "file", source: "../keys/my_rsa.pub", destination: "/home/vagrant/.ssh/my_rsa.pub"
+  config.vm.provision "shell", path: "../install_scripts/prepareHost.sh"
+  config.vm.provision "shell", path: "../install_scripts/installDocker.sh"
+  config.vm.provision "shell", path: "../install_scripts/authorise_key.sh"
+
+  config.vm.provider "virtualbox" do |vm|
+    vm.name = "ubuntu-k8s-minio"
+    vm.gui = false
+    vm.memory = 2048
+    vm.cpus = 2
+  end
+end
