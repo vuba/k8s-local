@@ -1,7 +1,7 @@
 #!/bin/sh
-# mkdir logs
+mkdir logs
 MACHINES="rancher host registry nfs minio node-1 node-2"
-START_TIME=time
+START_TIME=$(date +%s)
 echo "Setting machine to provision"
 echo "Machines to be provisioned:["
 echo $MACHINES
@@ -13,7 +13,7 @@ do
   vagrant up 2>&1 | tee ../logs/$virtual_machines.logs
   cd ..
 done
-END_TIME=time
 echo "---- DONE PROVISIONING ----"
-EXECUTION_TIME=($START_TIME-$END_TIME)/1000
+END_TIME=$(date +%s)
+EXECUTION_TIME=$((START_TIME-END_TIME))
 echo "---- EXECUTION TIME $EXECUTION_TIME seconds ----"

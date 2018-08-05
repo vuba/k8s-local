@@ -1,7 +1,6 @@
 #!/bin/sh
-mkdir logs
 MACHINES="rancher host registry nfs minio node-1 node-2"
-START_TIME=time
+START_TIME=$(date +%s)
 echo "Machines to be halted:["
 echo $MACHINES
 echo "]"
@@ -12,7 +11,7 @@ do
   vagrant halt
   cd ..
 done
-END_TIME=time
 echo "---- DONE HALTING ----"
-EXECUTION_TIME=($START_TIME-$END_TIME)/1000
+END_TIME=$(date +%s)
+EXECUTION_TIME=$((START_TIME-END_TIME))
 echo "---- EXECUTION TIME $EXECUTION_TIME seconds ----"
