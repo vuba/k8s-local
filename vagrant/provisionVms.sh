@@ -1,6 +1,6 @@
 #!/bin/sh
 # mkdir logs
-MACHINES=rancher,host,registry,nfs,minio,node-1,node-2
+MACHINES="rancher host registry nfs minio node-1 node-2"
 START_TIME=time
 echo "Setting machine to provision"
 echo "Machines to be provisioned:["
