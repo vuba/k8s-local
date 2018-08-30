@@ -1,0 +1,47 @@
+---
+- name: Add user
+  user:
+    name: k8s
+    shell: /bin/bash
+    groups: sudo, systemd-journal, adm, docker
+    append: yes
+
+- name: Configure k8s user to be able to use sudo without password
+  lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: '^k8s\s'
+    line: 'k8s ALL=(All:ALL) NOPASSWD:ALL'
+    validate: 'visudo -cf %s'
+
+- name: Ensure ~/.ssh exists
+    file:
+      path: /home/k8s/.ssh
+      state: directory
+      mode: 0700
+      group: k8s
+      owner: k8s
+
+- name: Ensure that ~/.ssh/authorised_keys exists
+  copy:
+    content: "{{k8s_ssh_key_pub}}"
+    dest: /home/k8s/.ssh/authorized_keys
+    mode: 0600
+    group: k8s
+    owner: k8s
+
+- name: Ensure that ~/.ssh/k8s_rsa.pub exists
+  copy:
+    content: "{{ k8s_ssh_key_pub}}"
+    dest: /home/k8s/.ssh/k8s_rsa.pub
+    mode: 0600
+    group: k8s
+    owner: k8s
+
+- name: Ensure that ~/.ssh/k8s_rsa exists
+  copy:
+    content: "{{k8s_ssh_key}}"
+    dest: /home/k8s/.ssh/k8s_rsa
+    mode: 0600
+    group: k8s
+    owner: k8s

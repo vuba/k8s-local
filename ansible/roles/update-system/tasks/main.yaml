@@ -1,0 +1,24 @@
+---
+- name: "Update system"
+  apt:
+    upgrade: dist
+    update_cache: yes
+
+- name: Install necessary tools
+  apt:
+    pkg: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - nmap
+    - git
+    - curl
+    - unzip
+    - rar
+    - unrar
+    - tmux
+    - vim
+    - mc
+    - htop
+    - whois
+    - glances

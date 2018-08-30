@@ -1,0 +1,9 @@
+---
+- hosts: k8s-host
+  gather_facts: true
+  become: yes
+  user: ansible
+  
+  roles:
+    - configure-user
+    

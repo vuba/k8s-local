@@ -1,0 +1,67 @@
+---
+- name: read uname
+  shell: uname -r
+  register: uname_output
+  changed_when: false
+  check_mode: no
+
+- name: read distro name
+  shell: lsb_release -cs
+  register: distro_name
+  changed_when: false
+  check_mode: no
+
+- name: Install linux-image-extra-* packages
+  apt:
+    pkg: "{{ items }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - linux-image-extra-{{ uname_output.stdout}}
+    - linux-image-extra-virtual
+
+- name: add docker repository key
+  shell: "curl -sSL {{apt_key_url }} | sudo apt-key add -"
+
+- name: add docker repository and update apt cache
+  apt_repository:
+    repo: "{{ apt_repository }}"
+    filename: docker
+    state: present
+
+- name: Install or update docker package
+  apt:
+    name: docker-ce
+    state: latest
+    update_cache: yes
+
+- name: copy docker systemd port activation
+  copy:
+    src: docker-tcp.socket
+    dest: /etc/systemd/system/docker-tcp.socket
+    owner: root
+    mode: 0600
+
+- name: Enable Docker tcp Socker
+  command: systemctl enable docker-tcp.socket
+
+- name: Enable Docker socket
+  command: systemctl enable docker.socket
+
+- name: stop docker socket
+  service: name=docker state=stop
+
+- name: start docker tcp socket
+  command: systemctl start docker-tcp.socket
+
+- name: start docker unix socket
+  command: systemctl start docker.socket
+
+- name: start docker daemon
+  service: name=docker state=started
+
+- name: Add k8s user to docker group
+  user:
+    name: k8s
+    groups: docker
+    append: yes

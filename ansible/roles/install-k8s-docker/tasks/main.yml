@@ -1,0 +1,10 @@
+---
+- name: add docker repository key
+  shell: "curl https://releases.rancher.com/install-docker/17.03.sh | sh"
+
+
+- name: Add k8s user to docker group
+  user:
+    name: k8s
+    groups: docker
+    append: yes
