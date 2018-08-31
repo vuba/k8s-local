@@ -1,0 +1,3 @@
+---
+- name: confiure k8s-master
+  command: sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.0.8 --server https://192.168.50.101 --token "{{k8s_join_token}}" --ca-checksum "{{k8s_checksum}}" --etcd

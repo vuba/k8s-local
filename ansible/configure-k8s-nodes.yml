@@ -1,0 +1,23 @@
+---
+- hosts: k8s-etcd
+  gather_facts: true
+  become_user: k8s
+  
+  roles:
+    - configure-k8s-etcd
+
+---
+- hosts: k8s-workplane
+  gather_facts: true
+  become_user: k8s
+  
+  roles:
+    - configure-k8s-workplane
+
+---
+- hosts: k8s-nodes
+  gather_facts: true
+  become_user: k8s
+  
+  roles:
+    - configure-k8s-node

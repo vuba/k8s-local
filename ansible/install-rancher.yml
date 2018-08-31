@@ -1,8 +1,8 @@
 ---
-- hosts: all
+- hosts: rancher
   gather_facts: true
   become: yes
-  user: ansible
+  user: k8s
   
   roles:
-    - update-system
+    - install-rancher

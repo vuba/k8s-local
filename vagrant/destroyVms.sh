@@ -1,5 +1,5 @@
 #!/bin/sh
-MACHINES="rancher host registry nfs minio node-1 node-2"
+MACHINES="rancher etcd workplane registry nfs minio node-1 node-2"
 START_TIME=$(date +%s)
 echo "Setting machine to destroy"
 echo "Machines to be destroy:["

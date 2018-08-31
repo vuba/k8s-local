@@ -3,8 +3,14 @@ Host k8s-rancher
   HostName 192.168.50.101
   IdentityFile /home/vuba/.ssh/my_rsa
   User k8s
-# -----host----
-Host k8s-host
+# -----etcd----
+Host k8s-etcd
+  HostName 192.168.50.105
+  IdentityFile /home/vuba/.ssh/my_rsa
+  User k8s
+
+# -----workplane----
+Host k8s-workplane
   HostName 192.168.50.105
   IdentityFile /home/vuba/.ssh/my_rsa
   User k8s

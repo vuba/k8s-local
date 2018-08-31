@@ -1,5 +1,5 @@
 ---
-- hosts: k8s-host
+- hosts: all
   gather_facts: true
   become: yes
   user: ansible
