@@ -1,0 +1,7 @@
+---
+- hosts: k8s-controllplane
+  gather_facts: true
+  become_user: k8s
+  
+  roles:
+    - configure-k8s-controllplane

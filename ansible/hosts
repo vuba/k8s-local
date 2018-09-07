@@ -4,7 +4,7 @@
 [k8s-etcd]
 192.168.50.105
 
-[k8s-workplane]
+[k8s-controllplane]
 192.168.50.108
 
 [registry]
