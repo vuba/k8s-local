@@ -5,6 +5,7 @@ echo "Setting machine to destroy"
 echo "Machines to be destroy:["
 echo $MACHINES
 echo "]"
+cd vagrant
 for virtual_machines in $MACHINES
 do
   echo "---- DESTROYING $virtual_machines ----"

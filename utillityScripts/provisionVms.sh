@@ -1,12 +1,13 @@
 #!/bin/sh
 mkdir logs
-MACHINES="rancher etcd workplane registry nfs minio node-1 node-2"
+MACHINE_DIRECTORIES="rancher etcd workplane registry nfs minio node-1 node-2"
 START_TIME=$(date +%s)
 echo "Setting machine to provision"
 echo "Machines to be provisioned:["
-echo $MACHINES
+echo $MACHINE_DIRECTORIES
 echo "]"
-for virtual_machines in $MACHINES
+cd vagrant
+for virtual_machines in $MACHINE_DIRECTORIES
 do
   echo "---- PROVISIONING $virtual_machines ----"
   cd $virtual_machines

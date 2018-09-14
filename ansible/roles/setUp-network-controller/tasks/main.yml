@@ -1,0 +1,28 @@
+---
+- name: remove eth0.cfg file
+  file: path='/etc/network/interfaces.d/eth0.cfg' state=absent
+
+# - name: change name of interface eth1 to eth0
+#   lineinfile:
+#     dest: /etc/network/interfaces
+#     state: present
+#     regexp: '^eth1\s'
+#     line: 'eth0'
+
+- name: change name of interface eth1 to eth0
+  replace:
+    path: /etc/network/interfaces
+    regexp: 'eth1'
+    replace: 'eth0'
+
+- name: add configuration for new eth1
+  blockinfile:
+    path: /etc/network/interfaces
+    insertafter: EOF
+    marker: "# {mark} CUSTOM eth1 config"
+    block: |
+      auto eth1
+      iface eth1 inet dhcp
+
+- name: shut-down hosts
+  shell: "sudo shutdown -h 0"
