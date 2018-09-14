@@ -6,7 +6,7 @@ echo "Setting machine to provision"
 echo "Machines to be provisioned:["
 echo $MACHINE_DIRECTORIES
 echo "]"
-cd vagrant
+cd ../vagrant
 for virtual_machines in $MACHINE_DIRECTORIES
 do
   echo "---- PROVISIONING $virtual_machines ----"

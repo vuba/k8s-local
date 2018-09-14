@@ -24,20 +24,20 @@
     owner: root
     mode: 0600
 
-- name: Enable Docker tcp Socker
-  command: systemctl enable docker-tcp.socket
+# - name: Enable Docker tcp Socker
+#   command: systemctl enable docker-tcp.socket
 
 # - name: Enable Docker socket
 #   command: systemctl enable docker.socket
 
-- name: stop docker socket
-  command: sudo service docker stop
+# - name: stop docker socket
+#   command: sudo service docker stop
 
-- name: start docker tcp socket
-  command: systemctl start docker-tcp.socket
+# - name: start docker tcp socket
+#   command: systemctl start docker-tcp.socket
 
-- name: start docker unix socket
-  command: systemctl start docker.socket
+# - name: start docker unix socket
+#   command: systemctl start docker.socket
 
-- name: start docker daemon
-  service: name=docker state=started
+# - name: start docker daemon
+#   service: name=docker state=started

@@ -4,7 +4,7 @@ START_TIME=$(date +%s)
 echo "Machines to be halted:["
 echo $MACHINES
 echo "]"
-cd vagrant
+cd ../vagrant
 for virtual_machines in $MACHINES
 do
   echo "---- HALTING $virtual_machines ----"
