@@ -4,4 +4,4 @@
   become_user: k8s
   
   roles:
-    - configure-k8s-node-1-2
+    - configure-k8s-node-2

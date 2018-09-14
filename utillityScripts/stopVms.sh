@@ -8,7 +8,7 @@ echo "]"
 for virtual_machine in $MACHINES
 do
   echo "---- Staring $virtual_machine ----"
-  VBoxManage startvm $virtual_machine --type headless 
+  VBoxManage controlvm $virtual_machine poweroff
 done
 echo "---- All Machines started ----"
 END_TIME=$(date +%s)

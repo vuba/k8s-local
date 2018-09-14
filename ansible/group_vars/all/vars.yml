@@ -2,5 +2,5 @@
 ansible_user: vagrant
 ansible_ssh_private_key_file: ~/.ssh/my_rsa
 ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-k8s_join_token: "wlpzhpltjnvccfhx78mztr2lvml69d8gcc58fm6t7mf4v2pjbvst9g"
-k8s_checksum: "e718cece63496a9ffa060305a1ce61bfea32eabac6b1b522a9a50c756b98533d"
+k8s_join_token: "7lwh9rv9ngts9wb722pkbv9wqbpkt7wbmmctrzw8r4q7hkhm7qt2gf"
+k8s_checksum: "f03dc2ba2772f4c541f8ae45c4959fab54e6a5d52b023b2f5ac11027d8921de7"
