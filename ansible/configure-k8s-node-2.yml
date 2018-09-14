@@ -1,0 +1,7 @@
+---
+- hosts: k8s-node-2
+  gather_facts: true
+  become_user: k8s
+  
+  roles:
+    - configure-k8s-node-1-2
